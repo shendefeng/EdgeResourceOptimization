@@ -224,11 +224,11 @@ plt.xlabel('步数/步', fontproperties='SimSun', fontsize=15)
 plt.ylabel('奖励', fontproperties='SimSun', fontsize=15)
 # plt.xlabel('步数/步', fontsize=15)
 # plt.ylabel('平均奖励', fontsize=15)
-plt.plot(epochs, smooth(epoch_rewards_MADDPG),
+plt.plot(epochs, smooth(epoch_rewards_DDQN),
          linewidth=2.0,  linestyle='--', label='DDQN')
-plt.plot(epochs, smooth(epoch_rewards_DDQN), linewidth=2.0,
+plt.plot(epochs, smooth(epoch_rewards_D3QN), linewidth=2.0,
          linestyle='dotted', color='green', label='Dueling DQN')
-plt.plot(epochs, smooth(epoch_rewards_D3QN),
+plt.plot(epochs, smooth(epoch_rewards_MADDPG),
          linewidth=2.0, color='red', label='DDPG')
 # plt.rcParams.update({'fontsize': 20})
 plt.legend(prop={'family': 'Times New Roman', 'size': 12})
@@ -240,11 +240,11 @@ plt.xlabel('步数/步', fontproperties='SimSun', fontsize=15)
 plt.ylabel('平均时延/s', fontproperties='SimSun', fontsize=15)
 # plt.xlabel('步数/步', fontsize=15)
 # plt.ylabel('平均时延/s', fontsize=15)
-plt.plot(epochs, smooth(epoch_times_MADDPG),
+plt.plot(epochs, smooth(epoch_times_DDQN),
          linewidth=2.0,  linestyle='--', label='DDQN')
-plt.plot(epochs, smooth(epoch_times_DDQN), linewidth=2.0,
+plt.plot(epochs, smooth(epoch_times_D3QN), linewidth=2.0,
          linestyle='dotted', color='green', label='Dueling DQN')
-plt.plot(epochs, smooth(epoch_times_D3QN),
+plt.plot(epochs, smooth(epoch_times_MADDPG),
          linewidth=2.0, color='red', label='DDPG')
 # plt.rcParams.update({'fontsize': 20})
 plt.legend(prop={'family': 'Times New Roman', 'size': 12})
@@ -256,11 +256,11 @@ plt.xlabel('步数/步', fontproperties='SimSun', fontsize=15)
 plt.ylabel('卸载成功率', fontproperties='SimSun', fontsize=15)
 # plt.xlabel('步数/步', fontsize=20)
 # plt.ylabel('成功率', fontsize=20)
-plt.plot(epochs, smooth(epoch_wrong_times_MADDPG),
+plt.plot(epochs, smooth(epoch_wrong_times_DDQN),
          linewidth=2.0,  linestyle='--', label='DDQN')
-plt.plot(epochs, smooth(epoch_wrong_times_DDQN), linewidth=2.0,
+plt.plot(epochs, smooth(epoch_wrong_times_D3QN), linewidth=2.0,
          linestyle='dotted', color='green', label='Dueling DQN')
-plt.plot(epochs, smooth(epoch_wrong_times_D3QN),
+plt.plot(epochs, smooth(epoch_wrong_times_MADDPG),
          linewidth=2.0, color='red', label='DDPG')
 # plt.rcParams.update({'fontsize': 20})
 plt.legend(prop={'family': 'Times New Roman', 'size': 12})
@@ -272,11 +272,11 @@ plt.xlabel('步数/步', fontproperties='SimSun', fontsize=15)
 plt.ylabel('服务器平均负载', fontproperties='SimSun', fontsize=15)
 # plt.xlabel('步数/步', fontsize=20)
 # plt.ylabel('服务器平均负载', fontsize=20)
-plt.plot(epochs, smooth(epoch_utilization_D3QN),
-         linewidth=2.0,  linestyle='--', label='DDQN')
-plt.plot(epochs, smooth(epoch_utilization_MADDPG), linewidth=2.0,
-         linestyle='dotted', color='green', label='Dueling DQN')
 plt.plot(epochs, smooth(epoch_utilization_DDQN),
+         linewidth=2.0,  linestyle='--', label='DDQN')
+plt.plot(epochs, smooth(epoch_utilization_D3QN), linewidth=2.0,
+         linestyle='dotted', color='green', label='Dueling DQN')
+plt.plot(epochs, smooth(epoch_utilization_MADDPG),
          linewidth=2.0, color='red', label='DDPG')
 # plt.rcParams.update({'fontsize': 20})
 plt.legend(prop={'family': 'Times New Roman', 'size': 12})
@@ -288,11 +288,11 @@ plt.xlabel('步数/步', fontproperties='SimSun', fontsize=15)
 plt.ylabel('服务器负载方差', fontproperties='SimSun', fontsize=15)
 # plt.xlabel('步数/步', fontsize=20)
 # plt.ylabel('服务器平均负载', fontsize=20)
-plt.plot(epochs, smooth(epoch_differ_D3QN),
-         linewidth=2.0,  linestyle='--', label='DDQN')
-plt.plot(epochs, smooth(epoch_differ_MADDPG), linewidth=2.0,
-         linestyle='dotted', color='green', label='Dueling DQN')
 plt.plot(epochs, smooth(epoch_differ_DDQN),
+         linewidth=2.0,  linestyle='--', label='DDQN')
+plt.plot(epochs, smooth(epoch_differ_D3QN), linewidth=2.0,
+         linestyle='dotted', color='green', label='Dueling DQN')
+plt.plot(epochs, smooth(epoch_differ_MADDPG),
          linewidth=2.0, color='red', label='DDPG')
 # plt.rcParams.update({'fontsize': 20})
 plt.legend(prop={'family': 'Times New Roman', 'size': 12})
